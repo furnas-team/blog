@@ -1,0 +1,53 @@
+@import "../../common/vars";
+@import "../../common/mixins";
+
+.button {
+  font-family: $font-family;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 3px;
+  border: none;
+
+  @include for-tablet-portrait-up {
+    font-family: $font-family-alternative;
+  }
+
+  &_default {
+    border: 1px solid #E91FFF;
+    color: #E91FFF;
+    padding: 8px 16px;
+    line-height: 14px;
+    background-color: #ffffff;
+    font-size: 14px;
+    @include for-tablet-portrait-up {
+      padding: 10px 16px;
+      font-size: 16px;
+    }
+  }
+
+  &_big-pink {
+    background-color: #E91FFF;
+    color: #ffffff;
+    min-width: 180px;
+    padding: 12px 24px;
+    line-height: 16px;
+    font-size: 18px;
+    @include for-tablet-portrait-up {
+      padding: 19px 24px;
+    }
+  }
+
+  &_big-blue {
+    background-color: #10BBFF;
+    color: #ffffff;
+    min-width: 180px;
+    padding: 12px 24px;
+    line-height: 16px;
+    font-size: 18px;
+    @include for-tablet-portrait-up {
+      padding: 19px 24px;
+    }
+  }
+
+}

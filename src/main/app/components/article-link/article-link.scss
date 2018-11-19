@@ -1,0 +1,34 @@
+@import "../../common/vars";
+@import "../../common/mixins";
+
+.article-link {
+  font-family: $font-family;
+  line-height: $font-block-text-line-height;
+  cursor: pointer;
+
+  &_big {
+    font-size: $font-article-link-size;
+    line-height: 24px;
+  }
+
+  &_small {
+    font-size: $font-block-text-size;
+  }
+
+  &__a {
+    text-decoration: none;
+  }
+
+  &_theme-dark {
+    .article-link__a {
+      color: $font-color-white;
+      border-bottom: 1px solid $font-color-white;
+    }
+  }
+  &_theme-light {
+    .article-link__a {
+      color: $font-color-black;
+      border-bottom: 1px solid $font-color-black;
+    }
+  }
+}

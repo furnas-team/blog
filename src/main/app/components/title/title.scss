@@ -1,0 +1,23 @@
+@import "../../common/vars";
+@import "../../common/mixins";
+
+.title {
+  font-family: $font-family;
+  font-size: $font-title-size;
+  text-transform: uppercase;
+  color: $font-color-white;
+  font-weight: normal;
+  @include for-phone-only {
+    font-size: $font-title-mobile-size;
+  }
+  &_theme-dark {
+    color: $font-color-white;
+  }
+  &_theme-light {
+    color: $font-color-black;
+  }
+
+  @include for-tablet-portrait-up {
+    font-family: $font-family-alternative;
+  }
+}

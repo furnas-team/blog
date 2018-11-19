@@ -1,0 +1,21 @@
+@import "../../common/vars";
+@import "../../common/mixins";
+
+.block-text {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  margin-bottom: 15px;
+
+  @include for-tablet-portrait-up {
+    font-family: $font-family-alternative;
+  }
+
+  &_theme-dark {
+    color: $font-color-gray;
+  }
+  &_theme-light {
+    color: #333333;
+  }
+}

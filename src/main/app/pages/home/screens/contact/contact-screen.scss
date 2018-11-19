@@ -1,0 +1,54 @@
+@import "../../../../common/vars";
+@import "../../../../common/mixins";
+
+.contact-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__title {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    margin: 102px 16px 0;
+    text-align: center;
+  }
+
+  &__links {
+    margin: 40px 16px 0;
+    text-align: center;
+  }
+
+  &__input {
+    margin-top: 32px;
+    @include for-tablet-portrait-up {
+      flex-grow: 1;
+      margin-right: 24px;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+  }
+
+  &__button-back {
+    margin-top: 32px;
+  }
+
+  &__link {
+    margin-bottom: 16px;
+  }
+
+  &__image {
+    background: url('images/plane.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 250px;
+    height: 82px;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 56px;
+  }
+}

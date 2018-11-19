@@ -1,0 +1,146 @@
+@import "../../common/vars";
+@import "../../common/mixins";
+
+.test {
+
+  width: 100%;
+
+  &__header {
+    background: url('images/background.png') no-repeat;
+    background-size: contain;
+    height: 42vw;
+    margin-bottom: 9vw;
+  }
+
+  &__step {
+
+  }
+
+  &__step-title {
+    color: #ffffff;
+    font-family: $font-family;
+    font-size: 6.5vw;
+    padding: 19vw 5vw;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  &__step-title_small {
+    font-size: 4.5vw;
+    margin-top: -1vw;
+    line-height: 6vw;
+  }
+
+  &__step-body {
+    margin-bottom: 10vw;
+  }
+
+  &__header-links-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    right: 2vw;
+  }
+
+  &__header-link {
+    color: #ffffff;
+    font-family: $font-family;
+    display: block;
+    font-size: 3.5vw;
+    margin: 3vw;
+    letter-spacing: 1px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  &__text-block {
+    color: #566a8e;
+    font-family: $font-family;
+    font-size: 4.5vw;
+    font-weight: 300;
+    margin: 0 5vw 3vw 5vw;
+    letter-spacing: 1px;
+    line-height: 6.5vw;
+  }
+
+  &__button {
+    border: none;
+    padding: 3vw 9vw;
+    color: $font-color-white;
+    font-family: $font-family;
+    font-size: 5vw;
+    cursor: pointer;
+    background-color: rgba(229, 0, 133, 0.8);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 100vw;
+    letter-spacing: 1px;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+  }
+
+  &__button_blue {
+    background-color: #3CB4E6;
+  }
+
+  &__button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 13vw;
+  }
+
+  &__question-option {
+    color: #566a8e;
+    font-family: $font-family;
+    font-size: 4.5vw;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 6.5vw 0;
+    margin: 0 5vw;
+  }
+
+  &__question-option + &__question-option {
+    border-top: 1px solid #B3C5E6;
+  }
+
+  &__question-option_selected {
+    background-color: #EDFAFF;
+    color: #3EC4FB;
+    border-radius: 10px;
+  }
+
+  &__question-option_selected + &__question-option {
+    border-color: transparent;
+  }
+
+  &__question-option + &__question-option_selected {
+    border-color: transparent;
+  }
+
+  &__question-button-row {
+    margin-top: 6.5vw;
+    margin-left: 5vw;
+  }
+
+  &__result-title {
+    color: #6A7A98;
+    font-family: $font-family;
+    font-size: 7vw;
+    letter-spacing: 1px;
+    margin: 0 5vw 5vw
+  }
+
+  &__result-link {
+    color: #566a8e;
+    font-family: $font-family;
+    font-size: 4.5vw;
+    margin: 0 5vw 3vw 5vw;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #566a8e;
+    display: inline-block;
+  }
+}

@@ -1,36 +1,51 @@
 {
-  "name": "furnas",
+  "name": "furnas-blog",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "base64-inline-loader": "^1.1.1",
+    "classnames": "^2.2.5",
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
+    "mixpanel-browser": "^2.18.0",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.0",
+    "react-favicon": "0.0.14",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-yandex-metrika": "^2.3.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.prod.js",
     "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git@github-furnas:furnas-team/furnas.git"
+    "url": "git@github-furnas:furnas-team/blog.git"
   },
   "author": "",
   "license": "ISC"
