@@ -38,7 +38,7 @@ app.get("*", (req, res) => {
     <body>
     <div id="root" dangerouslySetInnerHTML={ {__html: appString} }>
     </div>
-    <script src="/blog.client.js"></script>
+    <script src="/blog.client.js.gz"></script>
     </body>
     </html>));
   res.end();
