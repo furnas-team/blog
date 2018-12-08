@@ -7,6 +7,10 @@ const {renderToString, renderToStaticMarkup} = require('react-dom/server');
 const {Helmet} = require('react-helmet');
 
 const app = express();
+app.get('*.gz', function(req, res, next) {
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
 app.use(express.static('public'));
 
 app.get("*", (req, res) => {
