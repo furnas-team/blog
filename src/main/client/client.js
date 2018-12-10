@@ -11,7 +11,7 @@ window.mixpanel = {
 };
 
 //yandex metrika
-window.yaCounter = new Ya.Metrika({id: 48461990});
+window.yaCounter = new Ya.Metrika({id: 51501746});
 
 
 hydrate((
