@@ -37,7 +37,7 @@ const clientConfig = {
         ]
       },
       {
-        test: /\.xml$/,
+        test: /\.(xml|txt)$/,
         use: [
           {
             loader: 'file-loader',
@@ -95,7 +95,7 @@ const serverConfig = {
         ]
       },
       {
-        test: /\.xml$/,
+        test: /\.(xml|txt)$/,
         use: [
           {
             loader: 'file-loader',

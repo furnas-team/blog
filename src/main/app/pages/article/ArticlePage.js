@@ -1,12 +1,19 @@
 import React from 'react';
-import './home.scss';
+import './article.scss';
 import {Helmet} from 'react-helmet';
 import {Header} from '../../components/header/Header';
-import {ContactScreen} from './screens/contact/ContactScreen';
 import {Popup} from '../../components/Popup/Popup';
-import {WorkerVisaDocumentsCard} from '../../articles/worker-visa-documents/WorkerVisaDocumentsCard';
+import {ContactScreen} from '../home/screens/contact/ContactScreen';
+import {string} from 'prop-types';
+import {WorkerVisaDocuments} from '../../articles/worker-visa-documents/WorkerVisaDocuments';
+import {Article} from '../../models/ArticleModel';
 
-export class HomePage extends React.Component {
+export class ArticlePage extends React.Component {
+
+  static propTypes = {
+    article: string
+  };
+
 
   state = {
     userContact: '',
@@ -16,7 +23,7 @@ export class HomePage extends React.Component {
 
   handleContactClick = () => {
     window.mixpanel.track(
-      "Furnas | user clicked contact button"
+      "Furnas.Blog | user clicked contact button"
     );
     this.setState({contactPopupShown: !this.state.contactPopupShown, requestSent: false});
   };
@@ -24,7 +31,7 @@ export class HomePage extends React.Component {
   handleSendContactClick = contact => {
     if (contact) {
       window.mixpanel.track(
-        "Furnas | added user contact",
+        "Furnas.Blog | added user contact",
         {contact}
       );
       this.setState({contactPopupShown: true, requestSent: true});
@@ -37,6 +44,7 @@ export class HomePage extends React.Component {
 
   render() {
     const {contactPopupShown, requestSent} = this.state;
+    const {article} = this.props;
     return (
       [
         <Helmet>
@@ -47,7 +55,7 @@ export class HomePage extends React.Component {
           <Header onContactClick={this.handleContactClick}
                   contactPopupShown={contactPopupShown}/>
           <div className="home__content">
-            <WorkerVisaDocumentsCard/>
+            {article === Article.WORKER_VISA_DOCUMENTS && <WorkerVisaDocuments/>}
           </div>
           <Popup shown={contactPopupShown}>
             <ContactScreen requestSent={requestSent}

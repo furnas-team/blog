@@ -1,8 +1,7 @@
 import React from 'react';
 import './title.scss';
 import classNames from 'classnames';
-import {string, any} from 'prop-types';
-import {createThemeClassName, ThemeConsumer} from '../theme-context/ThemeContext';
+import {any, string} from 'prop-types';
 
 const BASE_CLASS_NAME = 'title';
 
@@ -14,13 +13,9 @@ Title.propTypes = {
 export function Title({children, className}) {
 
   return (
-    <ThemeConsumer>
-      {theme => (
-        <h1 className={classNames(BASE_CLASS_NAME, createThemeClassName(BASE_CLASS_NAME, theme), className)}>
-          {children}
-        </h1>
-      )}
-    </ThemeConsumer>
+    <h1 className={classNames(BASE_CLASS_NAME, className)}>
+      {children}
+    </h1>
   );
 
 }

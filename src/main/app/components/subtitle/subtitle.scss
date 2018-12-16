@@ -6,14 +6,9 @@
   font-size: $font-subtitle-size;
   letter-spacing: $letter-spacing;
   font-weight: $font-weight-light;
+  color: $font-color-black;
   @include for-phone-only {
     font-size: $font-subtitle-mobile-size;
-  }
-  &_theme-dark {
-    color: $font-color-white;
-  }
-  &_theme-light {
-    color: $font-color-black;
   }
 
   @include for-tablet-portrait-up {
